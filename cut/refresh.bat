@@ -1,0 +1,1 @@
+copy tmp.jpg.bak tmp.jpg

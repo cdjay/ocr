@@ -1,7 +1,7 @@
 from PIL import Image
 import time
 start = time.clock()
-im = Image.open("new3.jpg")
+im = Image.open("1219.jpg")
 im=im.resize((960, 540),Image.ANTIALIAS)
 print('原始图像属性:',im.format, im.size, im.mode)
 box = (67, 162, 265, 300)
@@ -47,7 +47,7 @@ try:
         filename='p'+str(i)+'.jpg'
         soc=gt(filename)
         # ps[i]=soc['words_result']
-        # print(soc['words_result'][0]['words'])
+        print(soc['words_result'][0]['words'])
         ps.append(int((soc['words_result'][0]['words'])))
         # print('成绩表为:',ps)
 except:
@@ -56,7 +56,6 @@ except:
 
 
 # 清洗数据
-# ps=[760, 440, 320, 260, 20, 0,-540,1240]
 for i in range(0,7):
     if ps[i+1]>ps[i]:
         ps[i+1]=abs(ps[i+1])*-1
