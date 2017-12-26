@@ -22,3 +22,7 @@ def fid(a): # 格式化ID
 def fscore(score): #分数修正
     if '+' in score:return int(fid(score))
     else:return int(fid(score))*-1
+
+def filltxt(txt): # 名字填充
+    txt+=" "*(10-len(txt.encode('gbk')))
+    return txt

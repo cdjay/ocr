@@ -4,9 +4,7 @@ from PIL import Image
 import ocrmod
 import time
 import ocrdef
-# import itchat
 
-# itchat.auto_login(True,enableCmdQR=True)
 start = time.clock()
 
 # 打开图片并resize原图.
@@ -94,30 +92,36 @@ print()
 print('开始识别数据>>>>>')
 print()
 print('俱乐部ID: {}   房间ID: {}   游戏时间: {} {}'.format(player.club, player.room, player.date, player.time))
-print('-' * 60)
-print('玩家1:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}  大赢家'.format(player.name1, player.id1, player.score1,player.score1 * 0.95))
-print('玩家2:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}'.format(player.name2, player.id2, player.score2,player.score2))
-print('玩家3:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}'.format(player.name3, player.id3, player.score3,player.score3))
-print('玩家4:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}'.format(player.name4, player.id4, player.score4,player.score4))
-print('玩家5:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}'.format(player.name5, player.id5, player.score5,player.score5))
-print('玩家6:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}'.format(player.name6, player.id6, player.score6,player.score6))
-print('玩家7:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}'.format(player.name7, player.id7, player.score7,player.score7))
-print('玩家8:{} \n   ID:{}  分数: {:5}  倍数:0.5  税率:5%  税后:￥{:10.2f}  土豪'.format(player.name8, player.id8, player.score8,player.score8))
+print('-' * 62)
+print('玩家1: {}  ID:{}     分数: {:5}     大赢家'.format(ocrdef.filltxt(player.name1), player.id1, player.score1,player.score1 * 0.95))
+print('玩家2: {}  ID:{}     分数: {:5}'.format(ocrdef.filltxt(player.name2), player.id2, player.score2,player.score2))
+print('玩家3: {}  ID:{}     分数: {:5}'.format(ocrdef.filltxt(player.name3), player.id3, player.score3,player.score3))
+print('玩家4: {}  ID:{}     分数: {:5}'.format(ocrdef.filltxt(player.name4), player.id4, player.score4,player.score4))
+print('玩家5: {}  ID:{}     分数: {:5}'.format(ocrdef.filltxt(player.name5), player.id5, player.score5,player.score5))
+print('玩家6: {}  ID:{}     分数: {:5}'.format(ocrdef.filltxt(player.name6), player.id6, player.score6,player.score6))
+print('玩家7: {}  ID:{}     分数: {:5}'.format(ocrdef.filltxt(player.name7), player.id7, player.score7,player.score7))
+print('玩家8: {}  ID:{}     分数: {:5}     土豪'.format(ocrdef.filltxt(player.name8), player.id8, player.score8,player.score8))
 print('-' * 60)
 print('本次耗时:  ', time.clock() - start, '秒')
 
 
 
 
-# wxmsg = ''
-# wxmsg += '俱乐部ID: {}   \n房间编号: {}   \n游戏时间: {} {}\n\n'.format(player.club, player.room, player.date, player.time)
-# wxmsg += player.name1 + '  ' + str(player.score1) + '\n'
-# wxmsg += player.name2 + '  ' + str(player.score2) + '\n'
-# wxmsg += player.name3 + '  ' + str(player.score3) + '\n'
-# wxmsg += player.name4 + '  ' + str(player.score4) + '\n'
-# wxmsg += player.name5 + '  ' + str(player.score5) + '\n'
-# wxmsg += player.name6 + '  ' + str(player.score6) + '\n'
-# wxmsg += player.name7 + '  ' + str(player.score7) + '\n'
-# wxmsg += player.name8 + '  ' + str(player.score8) + '\n'
-#
-# itchat.send(wxmsg, 'filehelper')
+wxmsg = ''
+wxmsg += '俱乐部ID: {}   \n房间编号: {}   \n游戏时间: {} {}\n\n'.format(player.club, player.room, player.date, player.time)
+wxmsg += ocrdef.filltxt(player.name1)+ '  ' + str(player.score1) + '\n'
+wxmsg += ocrdef.filltxt(player.name2) + '  ' + str(player.score2) + '\n'
+wxmsg += ocrdef.filltxt(player.name3) + '  ' + str(player.score3) + '\n'
+wxmsg += ocrdef.filltxt(player.name4) + '  ' + str(player.score4) + '\n'
+wxmsg += ocrdef.filltxt(player.name5) + '  ' + str(player.score5) + '\n'
+wxmsg += ocrdef.filltxt(player.name6) + '  ' + str(player.score6) + '\n'
+wxmsg += ocrdef.filltxt(player.name7) + '  ' + str(player.score7) + '\n'
+wxmsg += ocrdef.filltxt(player.name8) + '  ' + str(player.score8) + '\n'
+
+
+# 微信发送接口
+import itchat
+start=time.clock()
+itchat.auto_login(True)
+itchat.send(wxmsg, '@@6735805cc959d434d3ad8884b93bd579cd1a94d05b4da0956020c7d155b929dc')
+print('战绩已发送至微信,耗时:',time.clock() - start, '秒')
