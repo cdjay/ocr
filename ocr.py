@@ -1,3 +1,5 @@
+# 纯OCR
+import
 import time
 start = time.clock()
 from aip import AipOcr

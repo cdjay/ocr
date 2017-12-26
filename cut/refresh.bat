@@ -1,1 +1,1 @@
-copy tmp.jpg.bak tmp.jpg
+copy tmp1.jpg tmp.jpg
