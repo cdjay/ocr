@@ -1,1 +1,1 @@
-copy tmp1.jpg tmp.jpg
+copy newtmp1.jpg newtmp.jpg

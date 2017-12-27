@@ -1,7 +1,7 @@
 # 主程序
 
 from PIL import Image
-import ocrmod
+import ocrapi
 import time
 import ocrdef
 
@@ -57,7 +57,12 @@ class player(object):
     pass
 
 
-gamedata = ocrmod.getdata('./cut/tmp.jpg')  # 调用百度ocr识别数据
+gamedata = ocrapi.getdata('./cut/tmp.jpg')  # 调用百度ocr识别数据
+for value in gamedata['words_result']:
+    print(value)
+
+print('本次合计有: {:.0f} 个玩家'.format(int(gamedata['words_result_num']-4)/3))
+
 # 数据赋值
 player.club = ocrdef.fid(gamedata['words_result'][0]['words'])
 player.room = ocrdef.fid(gamedata['words_result'][1]['words'])
@@ -119,9 +124,9 @@ wxmsg += ocrdef.filltxt(player.name7) + '  ' + str(player.score7) + '\n'
 wxmsg += ocrdef.filltxt(player.name8) + '  ' + str(player.score8) + '\n'
 
 
-# 微信发送接口
-import itchat
-start=time.clock()
-itchat.auto_login(True)
-itchat.send(wxmsg, '@@6735805cc959d434d3ad8884b93bd579cd1a94d05b4da0956020c7d155b929dc')
-print('战绩已发送至微信,耗时:',time.clock() - start, '秒')
+# # 微信发送接口
+# import itchat
+# start=time.clock()
+# itchat.auto_login(True)
+# itchat.send(wxmsg, '@@6735805cc959d434d3ad8884b93bd579cd1a94d05b4da0956020c7d155b929dc')
+# print('战绩已发送至微信,耗时:',time.clock() - start, '秒')

@@ -20,8 +20,9 @@ def fid(a): # 格式化ID
     return b
 
 def fscore(score): #分数修正
-    if '+' in score:return int(fid(score))
-    else:return int(fid(score))*-1
+    # if score=='老板甲':return 0
+    pass
+
 
 def filltxt(txt): # 名字填充
     txt+=" "*(10-len(txt.encode('gbk')))
