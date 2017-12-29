@@ -1,6 +1,6 @@
 # 纯OCR
 import time
-import image
+import ocrimage
 import ocrdef
 from aip import AipOcr
 
@@ -22,7 +22,7 @@ def gt(filename):
     result = client.basicAccurate(get_file_content(filename))  # 高精度
     return result
 
-image.readpic()
+# ocrimage.readpic()  #读取战绩图
 listjson = gt('./cut/newtmp.jpg')
 print('ID({})'.format(listjson['log_id']))
 print('识别数量: {}\n'.format(listjson['words_result_num']))
@@ -46,18 +46,15 @@ for i in listjson[8::3]:
     txt=ocrdef.fid(i['words'][3:])
     pid.append(txt[:8])
 for i in listjson[9::3]:
-    txt=i['words'][3:]
+    txt=ocrdef.fscore(i['words'][3:])
     ps.append(txt)
 
 # 格式化输出
-outputmsg='俱乐部: {}  \n房间号: {}  \n时  间: {} {}\n'.format(room[0],room[1],room[5],room[6])
-outputmsg+='-'*40
-outputmsg+='\n'
+outputmsg= "俱乐部: {}  \n房间号: {}  \n时  间: {} {}\n".format(room[0], room[1], room[5], room[6]) + '-' * 40 + '\n'
 for roll in range(0,8):
-    outputmsg+='{} [ {} ]   Score:  {}\n'.format(pid[roll],pname[roll],ps[roll])
-    # print('{} [ {} ]   Score:  {}'.format(pid[roll],pname[roll],ps[roll]))
+    outputmsg+='{:8} [ {} ]   Score:  {:5}\n'.format(pid[roll],pname[roll],ps[roll])
 outputmsg+='-'*40
 
 print(outputmsg)
-
-print('\n耗时:', time.clock() - start, '秒')
+ocrdef.checkscore(ps)
+print('耗时: {} 毫秒 ({:.2f}秒)'.format(int((time.clock() - start)*1000),time.clock() - start))
