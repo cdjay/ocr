@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f84c5528-8e5b-43d1-bc43-ecaf099d5c0d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/club/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/club/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/club/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/club/p6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/club/p7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/club/p8.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/1.jpg" afterPath="$PROJECT_DIR$/club/1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/2.jpg" afterPath="$PROJECT_DIR$/club/2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/3.jpg" afterPath="$PROJECT_DIR$/club/3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/4.jpg" afterPath="$PROJECT_DIR$/club/4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/5.jpg" afterPath="$PROJECT_DIR$/club/5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/mask.png" afterPath="$PROJECT_DIR$/club/mask.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/p1.jpg" afterPath="$PROJECT_DIR$/club/p1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/p2.jpg" afterPath="$PROJECT_DIR$/club/p2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/p3.jpg" afterPath="$PROJECT_DIR$/club/p3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/p4.jpg" afterPath="$PROJECT_DIR$/club/p4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/club/p5.jpg" afterPath="$PROJECT_DIR$/club/p5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cut/mm.jpg" afterPath="$PROJECT_DIR$/cut/mm.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cut/newtmp.jpg" afterPath="$PROJECT_DIR$/cut/newtmp.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/clubmember.py" afterPath="$PROJECT_DIR$/clubmember.py" />
-    </list>
+    <list default="true" id="f84c5528-8e5b-43d1-bc43-ecaf099d5c0d" name="Default" comment="" />
     <ignored path="ocr.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -424,7 +402,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2591687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -434,7 +412,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4580067" sideWeight="0.49511003" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54362416" sideWeight="0.49511003" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
