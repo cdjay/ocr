@@ -22,7 +22,7 @@ def gt(filename):
     result = client.basicAccurate(get_file_content(filename))  # 高精度
     return result
 
-# ocrimage.readpic()  #读取战绩图
+ocrimage.readpic()  #读取战绩图
 listjson = gt('./cut/newtmp.jpg')
 print('ID({})'.format(listjson['log_id']))
 print('识别数量: {}\n'.format(listjson['words_result_num']))
