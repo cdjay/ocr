@@ -6,6 +6,7 @@ from aip import AipOcr
 
 start = time.clock()
 
+# 百度AI参数----------------------------------
 """ APPID AK SK """
 APP_ID = '10532375'
 API_KEY = 'k4Lucb2SnVotnYfnBgkWskKs'
@@ -21,6 +22,7 @@ def gt(filename):
     # result = client.basicGeneral(get_file_content(filename)) #通用
     result = client.basicAccurate(get_file_content(filename))  # 高精度
     return result
+# --------------------------------------------
 
 ocrimage.readpic()  #读取战绩图
 listjson = gt('./cut/newtmp.jpg')

@@ -5,6 +5,8 @@ from PIL import Image
 # 参数配置
 path = './cut/mm.jpg' #需要处理的图片
 originposi=(72, 10) # 第一个坐标
+
+# 房间信息坐标集合
 roominfo={
     'club':(70,20,168,112), # (图片x,y.坐标x,y)
     'room':(70,20,298,111),
@@ -14,6 +16,8 @@ roominfo={
     'date':(100,20,714,111),
     'time':(50,20,810,112)
 }
+
+#用户信息坐标(第一个玩家)
 playerinfo={
     'name':(100,22,145,162),
     # 'qiang':(20,20,165,190),
@@ -23,11 +27,12 @@ playerinfo={
     'score':(135,40,90,234),
 }
 
+# 图片处理模块
 def readpic():
     setposi=originposi[1] # 粘贴图片y轴起始点
     im = Image.open(path) # 载入战绩图
     print('原始图像属性:', im.format, im.size, im.mode)
-    im = im.resize((960, 540), Image.ANTIALIAS)
+    im = im.resize((960, 540), Image.ANTIALIAS) # 更改图标大小
     tmp = Image.open('./cut/newtmp1.jpg') # 载入优化后图片
 
     for dictname,values in roominfo.items(): # 俱乐部信息优化
