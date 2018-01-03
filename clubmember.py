@@ -21,25 +21,30 @@ def gt(filename):
     return result
 
 listjson=[]
-for file in range(1,9):
+for file in range(1,2):
 
-    path='./club/{}.jpg'.format(file)
+    # path='./club/{}.jpg'.format(file)
+    #
+    # background = Image.open(path)
+    # background=background.resize((960, 540), Image.ANTIALIAS)
+    # foreground = Image.open('./club/mask.png')
+    ## 粘贴蒙版
+    # background.paste(foreground, (0, 0), foreground)
 
-    background = Image.open(path)
-    background=background.resize((960, 540), Image.ANTIALIAS)
-    foreground = Image.open('./club/mask.png')
 
-    background.paste(foreground, (0, 0), foreground)
-    background.save('./club/p{}.jpg'.format(file))
+    # background.save('./club/p{}.jpg'.format(file))
 
     json = gt('./club/p{}.jpg'.format(file))
     json = list(json['words_result'])
     listjson=listjson+json
 
-for x in range(0,4):
-    for file in listjson[x::8]:
-        print(file['words'][2:])
-for x in range(4,8):
-    for file in listjson[x::8]:
-        print(file['words'][2:])
+for x in listjson:
+    print(x['words'][2:])
+
+# for x in range(0,8):
+#     for file in listjson[x::8]:
+#         print(file['words'][2:])
+# for x in range(4,8):
+#     for file in listjson[x::8]:
+#         print(file['words'][2:])
 
