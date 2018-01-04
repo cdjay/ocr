@@ -21,7 +21,7 @@ def gt(filename):
     return result
 
 listjson=[]
-for file in range(1,6):
+for file in range(1,3):
 
     path='./club/{}.jpg'.format(file)
 
