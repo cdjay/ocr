@@ -30,8 +30,6 @@ for file in range(1,3):
     foreground = Image.open('./club/mask.png')
     # 粘贴蒙版
     background.paste(foreground, (0, 0), foreground)
-
-
     background.save('./club/p{}.jpg'.format(file))
 
     json = gt('./club/p{}.jpg'.format(file))

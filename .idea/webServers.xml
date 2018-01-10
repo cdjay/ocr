@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="70526bc3-8700-436d-ac6d-8813fd058a0a" name="xy" url="http://171.88.4.223">
+        <fileTransfer host="171.88.4.223" port="21" password="dfd2dfd3dfccdfdedfda" username="xyftp">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
